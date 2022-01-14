@@ -5,13 +5,11 @@ const { connect, connection } = require('mongoose');
 const connectionString =
   process.env.MONGODB_URI || 'mongodb://localhost:27017/studentsDB';
 
-connect(connectionString, 
+connect(connectionString || 'mongodb://localhost/infinite-shore', 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
 );
-
-// || 'mongodb://localhost/infinite-shore'
 
 module.exports = connection;
