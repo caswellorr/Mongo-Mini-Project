@@ -5,7 +5,7 @@ const { connect, connection } = require('mongoose');
 const connectionString =
   process.env.MONGODB_URI || 'mongodb://localhost:27017/studentsDB';
 
-mongoose.connect(connectionString || 'mongodb://localhost/infinite-shore', 
+connect(connectionString || 'mongodb://localhost/infinite-shore', 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
